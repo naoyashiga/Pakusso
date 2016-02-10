@@ -10,9 +10,16 @@
 
 .pks-main {
 	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
 
 	&__box {
-		display: flex;
+		flex-grow: 1;
+		background: #ffd;
+		border: 1px solid #000;
 	}
 
 	&__sns {
