@@ -1,8 +1,5 @@
-var gulp = require('gulp'), 
-    sass = require('gulp-ruby-sass') 
-    notify = require("gulp-notify") 
-    jade = require('gulp-jade'),
-    webserver = require('gulp-webserver');
+var gulp = require('gulp')
+var $ = require('gulp-load-plugins')();
 
 var config = {
      sassPath: './resources/sass',
@@ -11,7 +8,7 @@ var config = {
 
 gulp.task('server', function() {
   gulp.src('public')
-    .pipe(webserver({
+    .pipe($.webserver({
       livereload: true,
       port: 8001,
       fallback: 'public/index.html',
@@ -22,7 +19,7 @@ gulp.task('server', function() {
 gulp.task('jade', function() {
   return gulp.src(config.jadePath + "**/*.jade")
     .pipe(
-		jade({
+		$.jade({
 			pretty: true
 		})
 	)
@@ -30,11 +27,11 @@ gulp.task('jade', function() {
 });
 
 gulp.task('css', function() { 
-	return sass(config.sassPath + '/style.scss', {
+	return $.rubySass(config.sassPath + '/style.scss', {
              style: 'compressed'
 		})
-        .on("error", notify.onError(function (error) {
-        	return "Error: " + error.message;
+    .on("error", $.notify.onError(function (error) {
+    	return "Error: " + error.message;
          }))
          .pipe(gulp.dest('./public/css')); 
 });
