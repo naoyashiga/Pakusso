@@ -2,6 +2,10 @@ body {
 	background: linear-gradient(to bottom, #5CACD1 0%, #247ECC 100%);
 }
 
+.pks--typography--text-center {
+	text-align: center;
+}
+
 .pks-container {
 	width: 100%;
 	background: #ccc;
@@ -44,13 +48,27 @@ body {
 	}
 
 	&__download {
-		&--appStore {
+		width: 100%;
 
-		}
+		&-link {
+			display: inline-block;
+			text-indent: -9999px;
 
-		&--googlePlay {
-			// coming soon
+			&--appStore {
+				width: 200px;
+				height: 60px;
+				margin: 0 auto;
+				background-image: url("/images/appStore.png");
+				background-size: 200px 60px;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+
+			&--googlePlay {
+				// coming soon
+			}
 		}
+		
 	}
 }
 
