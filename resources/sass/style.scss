@@ -2,19 +2,45 @@ body {
 	background: linear-gradient(to bottom, #5CACD1 0%, #247ECC 100%);
 }
 
-.pks--typography--text-center {
-	text-align: center;
+.pks--typography {
+	&--body {
+		&-1 {
+			width: 320px;
+			height: 632px;
+			background-image: url("/images/device.png");
+			background-size: 320px 632px;
+			background-position: center;
+			margin: 0 auto;
+		}
+
+		&-2 {
+			color: #fff;
+		}
+
+		&-3 {
+			color: #fff;
+		}
+
+	}
+
+	&--text {
+		&-indent {
+			text-indent: -9999px;
+		}
+
+		&-center {
+			text-align: center;
+		}
+	}
 }
 
 .pks-container {
 	width: 100%;
-	background: #ccc;
 }
 
 .pks-wrapper {
 	width: 1180px;
 	margin: 30px auto 0;
-	
 }
 
 .pks-main {
@@ -27,20 +53,6 @@ body {
 
 	&__box {
 		flex-grow: 1;
-		background: #ffd;
-		border: 1px solid #000;
-
-		&-title {
-			text-indent: -9999px;
-			&--h1 {
-				width: 320px;
-    			height: 632px;
-				background-image: url("/images/device.png");
-				background-size: 320px 632px;
-				background-position: center;
-				margin: 0 auto;
-			}
-		}
 	}
 
 	&__sns {
@@ -52,7 +64,6 @@ body {
 
 		&-link {
 			display: inline-block;
-			text-indent: -9999px;
 
 			&--appStore {
 				width: 200px;
