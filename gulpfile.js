@@ -20,7 +20,7 @@ gulp.task('server', function() {
 });
 
 gulp.task('jade', function() {
-  return gulp.src(config.jadePath + "/index.jade")
+  return gulp.src(config.jadePath + "**/*.jade")
     .pipe(
 		jade({
 			pretty: true
