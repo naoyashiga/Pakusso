@@ -1,5 +1,14 @@
 include ../includes/common/base/base.jade
 body
+	.facebook.
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.5";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 	.pks-container
 		.pks-wrapper
 			main.pks-main
@@ -8,10 +17,15 @@ body
 				.pks-main__box
 					h2.pks--typography--body-2.pks--typography--text-center この春、Pakussoから、新しいパクリサイトが生まれます
 					h3.pks--typography--body-3.pks--typography--text-center アプリをリリース致しました。
-					.pks-main__sns
+					.pks-main__sns--twitter.pks--typography--text-center
+						a.twitter-share-button(href="https://twitter.com/share"  data-via="pakusso") Tweet.
+						script
+							!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+					.pks-main__sns--fb.pks--typography--text-center
+						div.fb-share-button(data-href="https://developers.facebook.com/docs/plugins/"  data-layout="button_count")
 					.pks-main__download.pks--typography--text-center
 						a.pks-main__download-link.pks-main__download-link--appStore.pks--typography--text-indent(href="" target="_blank") AppStoreからダウンロード
 			footer.pks-footer
-				.pks-footer__box
+				.pks-footer__box.pks--typography--text-center
 					small Copyright © 2016 Pakusso. All Rights Reserved.
 			
