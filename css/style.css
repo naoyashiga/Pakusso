@@ -19,7 +19,7 @@ body {
 .pks--typography--body-1 {
   width: 320px;
   height: 632px;
-  background-image: url("/images/device.png");
+  background-image: url("../images/device.png");
   background-size: 320px 632px;
   background-position: center;
   margin: 0 auto;
@@ -100,7 +100,7 @@ body {
   width: 200px;
   height: 60px;
   margin: 0 auto;
-  background-image: url("/images/appStore.png");
+  background-image: url("../images/appStore.png");
   background-size: 200px 60px;
   background-repeat: no-repeat;
   background-position: center;
