@@ -28,11 +28,13 @@ gulp.task('jade', function() {
 
 gulp.task('css', function() { 
 	return $.rubySass(config.sassPath + '/style.scss', {
-             style: 'compressed'
+            //style: 'compressed'
+             style: 'expanded'
 		})
     .on("error", $.notify.onError(function (error) {
     	return "Error: " + error.message;
          }))
+        .pipe($.autoprefixer({ browsers: [ 'ie >= 10', 'android >= 4.1' ] }))
          .pipe(gulp.dest('./public/css')); 
 });
 

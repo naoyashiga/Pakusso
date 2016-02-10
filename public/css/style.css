@@ -1,1 +1,18 @@
-.pks-container{width:100%}.pks-wrapper{width:1180px;margin:0 auto;background:#ccc}.pks-main{width:100%}
+.pks-container {
+  width: 100%;
+}
+
+.pks-wrapper {
+  width: 1180px;
+  margin: 0 auto;
+  background: #ccc;
+}
+
+.pks-main {
+  width: 100%;
+}
+.pks-main__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
