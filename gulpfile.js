@@ -7,11 +7,11 @@ var config = {
 }
 
 gulp.task('server', function() {
-  gulp.src('public')
+  gulp.src('./')
     .pipe($.webserver({
       livereload: true,
       port: 8001,
-      fallback: 'public/',
+      fallback: 'index.html',
       open: true
     }));
 });
@@ -23,7 +23,7 @@ gulp.task('jade', function() {
 			pretty: true
 		})
 	)
-    .pipe(gulp.dest('public/'));
+    .pipe(gulp.dest('./'));
 });
 
 gulp.task('css', function() { 
@@ -35,7 +35,7 @@ gulp.task('css', function() { 
     	return "Error: " + error.message;
          }))
         .pipe($.autoprefixer({ browsers: [ 'ie >= 10', 'android >= 4.1' ] }))
-         .pipe(gulp.dest('./public/css')); 
+         .pipe(gulp.dest('./css')); 
 });
 
 // Rerun the task when a file changes
