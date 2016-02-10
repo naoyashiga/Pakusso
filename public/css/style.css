@@ -1,11 +1,16 @@
+body {
+  background: -webkit-linear-gradient(top, #5CACD1 0%, #247ECC 100%);
+  background: linear-gradient(to bottom, #5CACD1 0%, #247ECC 100%);
+}
+
 .pks-container {
   width: 100%;
+  background: #ccc;
 }
 
 .pks-wrapper {
   width: 1180px;
-  margin: 0 auto;
-  background: #ccc;
+  margin: 30px auto 0;
 }
 
 .pks-main {
@@ -32,4 +37,15 @@
           flex-grow: 1;
   background: #ffd;
   border: 1px solid #000;
+}
+.pks-main__box-title {
+  text-indent: -9999px;
+}
+.pks-main__box-title--h1 {
+  width: 320px;
+  height: 632px;
+  background-image: url("/images/device.png");
+  background-size: 320px 632px;
+  background-position: center;
+  margin: 0 auto;
 }

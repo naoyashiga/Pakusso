@@ -1,4 +1,4 @@
-var gulp = require('gulp')
+var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 
 var config = {
@@ -11,13 +11,13 @@ gulp.task('server', function() {
     .pipe($.webserver({
       livereload: true,
       port: 8001,
-      fallback: 'public/index.html',
+      fallback: 'public/',
       open: true
     }));
 });
 
 gulp.task('jade', function() {
-  return gulp.src(config.jadePath + "**/*.jade")
+  return gulp.src(config.jadePath + "/index.jade")
     .pipe(
 		$.jade({
 			pretty: true
